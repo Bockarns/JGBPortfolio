@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding-top: 5rem;
+  min-height: 100vh;
+  font-family: "Press Start 2P", sans-serif;
+  color: #eee;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.gmn-header {
+  position: relative;
+  min-height: 30vh;
+  border-bottom: 7px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.gmn-container {
+  flex: 1;
+  color: #eee;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 3rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.number {
+  background: #eee;
+  color: #2563eb;
+  font-size: 4rem;
+  width: 12rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+
+.between {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.again {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 0.8rem;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.again:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #1d4ed8;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 3rem;
+  padding: 1.5rem;
+  width: 15rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: none;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #1d4ed8;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.message {
+  margin-bottom: 2rem;
+  min-height: 3rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.label-score {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding-top: 4rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .number {
+    font-size: 3rem;
+    width: 10rem;
+    height: 8rem;
+  }
+
+  .guess {
+    font-size: 2.5rem;
+    width: 12rem;
+    padding: 1rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .message,
+  .label-score,
+  .label-highscore {
+    font-size: 0.9rem;
+  }
+
+  .between {
+    font-size: 0.8rem;
+  }
+
+  .again {
+    font-size: 0.7rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding-top: 4rem;
+  }
+
+  .gmn-header {
+    min-height: 25vh;
+    padding: 0.5rem;
+  }
+
+  .gmn-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .number {
+    font-size: 2.5rem;
+    width: 8rem;
+    height: 6rem;
+  }
+
+  .guess {
+    font-size: 2rem;
+    width: 10rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .message {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .label-score,
+  .label-highscore {
+    font-size: 0.8rem;
+  }
+
+  .between {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 0.5rem;
+  }
+
+  .again {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  .number {
+    font-size: 2rem;
+    width: 6rem;
+    height: 5rem;
+  }
+
+  .guess {
+    font-size: 1.5rem;
+    width: 8rem;
+    padding: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .message,
+  .label-score,
+  .label-highscore {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .wrapper {
+    padding-top: 3rem;
+    min-height: auto;
+  }
+
+  .gmn-header {
+    min-height: auto;
+    padding: 0.5rem;
+    border-bottom: 4px solid #eee;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .number {
+    font-size: 2rem;
+    width: 6rem;
+    height: 4rem;
+  }
+
+  .gmn-container {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .guess {
+    font-size: 1.5rem;
+    width: 8rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .message {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+}

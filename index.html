@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="#" class="logo">Jerome Gordon-Bock Portfolio</a>
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm <span id="typedName"></span></h1>
+        <p class="tagline">Full Stack Web Development Student</p>
+        <p class="bio">Building digital experiences that make a difference.</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I am a passionate developer who loves gaining experience in
+              building web applications. I love creating beautiful, functional,
+              and user-friendly websites that solve real problems.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="1">0</span>+
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="5">0</span>+
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <!-- <div class="stat">
+              <span class="stat-number" data-target="0">0</span>+
+              <span class="stat-label">Happy Clients</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">&#60;/&#62;</div>
+            <h3>Frontend</h3>
+            <p>HTML, CSS, Bootstrap, JavaScript</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">&#9634;</div>
+            <h3>Backend</h3>
+            <p>C#, ASP.NET, SQL, .NET</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">&#9670;</div>
+            <h3>Tools</h3>
+            <p>Git, Jira, Figma, VS Code, VS Community</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <a
+              href="https://www.weblaunchpb.se/"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img
+                  src="images/projects/weblaunchpb.jpg"
+                  alt="WebLaunch PB"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <div class="project-info">
+                <h3>WebLaunch PB</h3>
+                <p>A web development and design service site</p>
+                <div class="project-tags">
+                  <span>Web Design</span>
+                  <span>Development</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-card">
+            <a
+              href="https://bockarns.github.io/Golfklubb-Centar/"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img
+                  src="images/projects/golfklubb.jpg"
+                  alt="Golfklubb Centar"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <div class="project-info">
+                <h3>Golfklubb Centar</h3>
+                <p>Golf club website</p>
+                <div class="project-tags">
+                  <span>Golf</span>
+                  <span>Club</span>
+                  <span>School Project</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-card">
+            <a
+              href="https://bockarns.github.io/Site/"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img
+                  src="images/projects/personal-site.jpg"
+                  alt="Personal Site"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <div class="project-info">
+                <h3>Personal Site</h3>
+                <p>Personal portfolio website</p>
+                <div class="project-tags">
+                  <span>Portfolio</span>
+                  <span>Personal</span>
+                  <span>First Portfolio Site</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-card">
+            <a
+              href="JS-projects/dices.html"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img
+                  src="images/projects/dice-game.jpg"
+                  alt="Dice Game"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <div class="project-info">
+                <h3>Dice Game</h3>
+                <p>A multiplayer dice rolling game</p>
+                <div class="project-tags">
+                  <span>JavaScript</span>
+                  <span>Game</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-card">
+            <a
+              href="JS-projects/guessMN.html"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img
+                  src="images/projects/guessMN.jpg"
+                  alt="Guess My Number"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <div class="project-info">
+                <h3>Guess My Number</h3>
+                <p>A number guessing game with highscore</p>
+                <div class="project-tags">
+                  <span>JavaScript</span>
+                  <span>Game</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-card">
+            <a
+              href="JS-projects/memory.html"
+              target="_blank"
+              class="project-link"
+            >
+              <div class="project-image">
+                <img
+                  src="images/projects/memory.jpg"
+                  alt="Memory Game"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <div class="project-info">
+                <h3>Memory Game</h3>
+                <p>A timed memory card matching game</p>
+                <div class="project-tags">
+                  <span>JavaScript</span>
+                  <span>Game</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form" id="contactForm" action="mailto:Jerome.bock@gmail.com" method="POST" enctype="text/plain">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="social-links">
+          <a
+            href="https://github.com/Bockarns"
+            target="_blank"
+            class="social-link"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jerome-gordon-bock/"
+            target="_blank"
+            class="social-link"
+            >LinkedIn</a
+          >
+          <a href="https://x.com/Bockarn" target="_blank" class="social-link"
+            >Twitter</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

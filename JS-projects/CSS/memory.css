@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 1rem 1rem;
+}
+
+.products {
+  text-align: center;
+  background-color: transparent;
+  padding: 1rem;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 100%;
+}
+
+.wrapper {
+  padding: 15px;
+  width: 100%;
+  max-width: 380px;
+  background: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 10px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.card {
+  aspect-ratio: 1;
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+  background: #fff;
+  border-radius: 7px;
+  transition: transform 0.25s linear;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+}
+
+.card .front-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .front-view img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.card .back-view {
+  transform: rotateY(-180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card .back-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card.flip .front-view {
+  transform: rotateY(180deg);
+}
+
+.card.flip .back-view {
+  transform: rotateY(0);
+}
+
+.card.shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.details {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #fff;
+  width: 100%;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.details p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.details p span {
+  margin-left: 4px;
+}
+
+.details button,
+.close-popup {
+  cursor: pointer;
+  font-size: 12px;
+  color: #2563eb;
+  border-radius: 4px;
+  padding: 6px 12px;
+  background: #fff;
+  border: 2px solid #2563eb;
+  transition: 0.3s ease;
+}
+
+.details button:hover {
+  color: #fff;
+  background: #2563eb;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  text-align: center;
+}
+
+.popup-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+}
+
+.close-popup {
+  margin-top: 1rem;
+  width: auto;
+  height: auto;
+  background-color: rgb(238, 236, 236);
+  box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.time-display {
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    padding: 5rem 1rem 1rem;
+  }
+
+  .products {
+    padding: 0.5rem;
+    min-height: calc(100vh - 60px);
+  }
+
+  .wrapper {
+    padding: 12px;
+    max-width: 350px;
+  }
+
+  .cards {
+    max-width: 320px;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .details {
+    max-width: 320px;
+    padding: 10px;
+  }
+
+  .details p {
+    font-size: 12px;
+  }
+
+  .popup {
+    padding: 1.5rem;
+  }
+
+  .popup-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  h1 {
+    font-size: 2rem;
+    padding: 4.5rem 0.5rem 0.5rem;
+  }
+
+  .products {
+    min-height: calc(100vh - 60px);
+  }
+
+  .wrapper {
+    padding: 10px;
+    max-width: 300px;
+  }
+
+  .cards {
+    max-width: 280px;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .details {
+    max-width: 280px;
+    padding: 8px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .details p {
+    font-size: 12px;
+  }
+
+  .details button {
+    font-size: 11px;
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  .popup {
+    padding: 1.2rem;
+    width: 85%;
+  }
+
+  .popup-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.6rem;
+    padding: 4rem 0.5rem 0.5rem;
+  }
+
+  .wrapper {
+    padding: 8px;
+    max-width: 260px;
+  }
+
+  .cards {
+    max-width: 240px;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .details {
+    max-width: 240px;
+  }
+
+  .details p {
+    font-size: 11px;
+  }
+
+  .popup {
+    padding: 1rem;
+  }
+
+  .popup-text {
+    font-size: 0.85rem;
+  }
+
+  .close-popup {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  h1 {
+    font-size: 1.5rem;
+    padding: 3.5rem 0.5rem 0.5rem;
+  }
+
+  .products {
+    padding: 0.5rem;
+    min-height: auto;
+  }
+
+  .wrapper {
+    padding: 8px;
+    max-width: 350px;
+  }
+
+  .cards {
+    max-width: 200px;
+  }
+
+  .details {
+    max-width: 200px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .details p {
+    font-size: 11px;
+  }
+
+  .details button {
+    width: 100%;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}

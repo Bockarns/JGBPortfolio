@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number - Jerome Gordon-Bock</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="CSS/guessMN.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="../index.html" class="logo">Portfolio</a>
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="wrapper">
+      <div class="gmn-header">
+        <h1>Guess My Number!</h1>
+        <p class="between">(Between 1 and 20)</p>
+        <button class="btn again">Again!</button>
+        <div class="number">?</div>
+      </div>
+      <div class="gmn-container">
+        <div class="left">
+          <input type="number" class="guess" />
+          <button class="btn check">Check!</button>
+        </div>
+        <div class="right">
+          <p class="message">Start guessing...</p>
+          <p class="label-score">💯 Score: <span class="score">20</span></p>
+          <p class="label-highscore">
+            🥇 Highscore: <span class="highscore">0</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" style="position: fixed; bottom: 0; width: 100%;">
+      <p>&copy; 2026 Jerome Gordon-Bock.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="./Scripts/guessMN.js"></script>
+  </body>
+</html>
